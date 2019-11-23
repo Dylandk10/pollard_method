@@ -18,6 +18,9 @@ def find_primes_in_b(bound):
     for i in range(2,bound):
         #get all the number between 2 and [i]
         for k in range(2, i):
+            #if k > half of i pass becuase no number can be divided by more then its half
+            if k > i//2:
+                pass
             #if [i] divides any number from 2-i its not prime break
             if i % k == 0:
                 prime = False
